@@ -29,46 +29,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       ":name" => $_POST["name"],
       ":phone_number" => $_POST["phone_number"]
     ]);
-    header("Location: index.php");
+    header("Location: home.php");
   }
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Contacts App</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./static/css/index.css" rel="stylesheet">
-  <!--Bootstrap-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/darkly/bootstrap.min.css" integrity="sha512-JjQ+gz9+fc47OLooLs9SDfSSVrHu7ypfFM7Bd+r4dCePQnD/veA7P590ovnFPzldWsPwYRpOK1FnePimGNpdrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</head>
+<?php require "./partials/header.php"; ?>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand font-weight-bold" href="#">
-        <img class="mr-2" src="./static/img/logo.png" />
-        ContactsApp
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Add Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <?php require "./partials/navbar.php"; ?>
   <main>
     <div class="container pt-5">
       <div class="row justify-content-center">
